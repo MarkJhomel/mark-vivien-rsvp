@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Mark &amp; Vivien. Ang Pag-iisang Dibdib.</title>
+
+  <meta
+    name="description"
+    content="Malugod namin kayong inaanyayahang makibahagi sa pagdiriwang ng aming pag-iisang dibdib."
+  >
+
+  <!-- Messenger / Facebook preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mark &amp; Vivien">
+  <meta property="og:title" content="Mark &amp; Vivien. Ang Pag-iisang Dibdib.">
+  <meta
+    property="og:description"
+    content="Malugod namin kayong inaanyayahang makibahagi sa pagdiriwang ng aming pag-iisang dibdib."
+  >
+  <meta
+    property="og:image"
+    content="https://raw.githubusercontent.com/MarkJhomel/mark-vivien-rsvp/main/Monogram.jpeg"
+  >
+  <meta
+    property="og:image:alt"
+    content="Mark &amp; Vivien wedding monogram"
+  >
+  <!-- Optional -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mark &amp; Vivien. Ang Pag-iisang Dibdib.">
+  <meta
+    name="twitter:description"
+    content="Malugod namin kayong inaanyayahang makibahagi sa pagdiriwang ng aming pag-iisang dibdib."
+  >
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/MarkJhomel/mark-vivien-rsvp/main/Monogram.jpeg">
+</head>
+
+<body>
+
+  <p>Maghintay ng ilang sandali habang binubuksan namin ang inyong paanyaya...</p>
+
+  <script>
+    const RSVP_URL =
+      'https://script.google.com/macros/s/AKfycbzeoAsITB9gmKUfDsYswvAoW9JJuVSUQgWKImcuxQGK9b3Uwp0q49n1Tk8cy9Ytqs/exec';
+
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+
+    if (token) {
+      window.location.replace(
+        RSVP_URL + '?token=' + encodeURIComponent(token)
+      );
+    } else {
+      window.location.replace(RSVP_URL);
+    }
+  </script>
+
+</body>
+</html>
